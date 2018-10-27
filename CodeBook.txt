@@ -1,0 +1,88 @@
+Study Design 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+Code Book
+
+subject - a reference to one of 30 subjects of the study
+activity - The activity (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) for which the measurments were obtained 
+
+tBodyAcc.mean...X - The mean measured body acceleration in the X direction
+tBodyAcc.mean...Y - The mean measured body acceleration in the Y direction
+tBodyAcc.mean...Z - The mean measured body acceleration in the Z direction
+tBodyAcc.std...X - The standard deviation of the measured body acceleration in the X direction
+tBodyAcc.std...Y - The standard deviation of the measured body acceleration in the Y direction
+tBodyAcc.std...Z - The standard deviation of the measured body acceleration in the Z direction
+tBodyAccJerk.mean...X - The mean of the body acceleration Jerk signals in the X direction
+tBodyAccJerk.mean...Y - The mean of the body acceleration Jerk signals in the Y direction
+tBodyAccJerk.mean...Z - The mean of the body acceleration Jerk signals in the Z direction
+tBodyAccJerk.std...X - The standard deviation of the body acceleration Jerk signals in the X direction
+tBodyAccJerk.std...Y - The standard deviation of the body acceleration Jerk signals in the Y direction
+tBodyAccJerk.std...Z - The standard deviation of the body acceleration Jerk signals in the Z direction
+tBodyAccJerkMag.mean.. - The mean of the three-dimensional body acceleration Jerk signals calculated using the Euclidean norm
+tBodyAccJerkMag.std.. - The standard deviation of the three-dimensional body acceleration Jerk signals calculated using the Euclidean norm
+tBodyAccMag.mean.. - The mean of the three-dimensional body acceleration calculated using the Euclidean norm
+tBodyAccMag.std.. - The standard deviation of the three-dimensional body acceleration calculated using the Euclidean norm
+
+tBodyGyro.mean...X - The mean measured body gyroscopic acceleration in the X direction
+tBodyGyro.mean...Y - The mean measured body gyroscopic acceleration in the Y direction
+tBodyGyro.mean...Z - The mean measured body gyroscopic acceleration in the Z direction
+tBodyGyro.std...X - The standard deviation of the measured body gyroscopic acceleration in the X direction
+tBodyGyro.std...Y - The standard deviation of the measured body gyroscopic acceleration in the Y direction
+tBodyGyro.std...Z - The standard deviation of the measured body gyroscopic acceleration in the Z direction
+tBodyGyroJerk.mean...X - The mean of the body gyroscopic acceleration Jerk signals in the X direction
+tBodyGyroJerk.mean...Y - The mean of the body gyroscopic acceleration Jerk signals in the Y direction
+tBodyGyroJerk.mean...Z - The mean of the body gyroscopic acceleration Jerk signals in the Z direction
+tBodyGyroJerk.std...X - The standard deviation of the body gyroscopic acceleration Jerk signals in the X direction
+tBodyGyroJerk.std...Y - The standard deviation of the body gyroscopic acceleration Jerk signals in the Y direction
+tBodyGyroJerk.std...Z - The standard deviation of the body gyroscopic acceleration Jerk signals in the Z direction
+tBodyGyroJerkMag.mean.. - The mean of the three-dimensional body gyroscopic acceleration Jerk signals calculated using the Euclidean norm
+tBodyGyroJerkMag.std.. - The standard deviation of the three-dimensional body gyroscopic acceleration Jerk signals calculated using the Euclidean norm
+tBodyGyroMag.mean.. - The mean of the three-dimensional body gyroscopic acceleration calculated using the Euclidean norm
+tBodyGyroMag.std.. - The standard deviation of the three-dimensional body gyroscopic acceleration calculated using the Euclidean norm
+
+tGravityAcc.mean...X - The mean measured gravity acceleration in the X direction
+tGravityAcc.mean...Y - The mean measured gravity acceleration in the Y direction
+tGravityAcc.mean...Z - The mean measured gravity acceleration in the Z direction
+tGravityAcc.std...X - The standard deviation of the measured gravity acceleration in the X direction
+tGravityAcc.std...Y - The standard deviation of the measured gravity acceleration in the Y direction
+tGravityAcc.std...Z - The standard deviation of the measured gravity acceleration in the Z direction
+tGravityAccMag.mean.. - The mean of the three-dimensional gravity acceleration calculated using the Euclidean norm
+tGravityAccMag.std.. - The standard deviation of the three-dimensional gravity acceleration calculated using the Euclidean norm
+
+fBodyAcc.mean...X - The mean of the Fast Fourier Transform of the body acceleration in the X direction
+fBodyAcc.mean...Y - The mean of the Fast Fourier Transform of the  body acceleration in the Y direction
+fBodyAcc.mean...Z - The mean of the Fast Fourier Transform of the  body acceleration in the Z direction
+fBodyAcc.std...X - The standard deviation of the of the Fast Fourier Transform of the  body acceleration in the X direction
+fBodyAcc.std...Y - The standard deviation of the of the Fast Fourier Transform of the  body acceleration in the Y direction
+fBodyAcc.std...Z - The standard deviation of the of the Fast Fourier Transform of the  body acceleration in the Z direction
+fBodyAccJerk.mean...X - The mean of the Fast Fourier Transform of the body acceleration Jerk signals in the X direction
+fBodyAccJerk.mean...Y - The mean of the Fast Fourier Transform of the body acceleration Jerk signals in the Y direction
+fBodyAccJerk.mean...Z - The mean of the Fast Fourier Transform of the body acceleration Jerk signals in the Z direction
+fBodyAccJerk.std...X - The standard deviation of the Fast Fourier Transform of the body acceleration Jerk signals in the X direction
+fBodyAccJerk.std...Y - The standard deviation of the Fast Fourier Transform of the body acceleration Jerk signals in the Y direction
+fBodyAccJerk.std...Z - The standard deviation of the Fast Fourier Transform of the body acceleration Jerk signals in the Z direction
+fBodyBodyAccJerkMag.mean.. - The mean of the Fast Fourier Transform of the three-dimensional body acceleration Jerk signals calculated using the Euclidean norm
+fBodyBodyAccJerkMag.std.. - The standard deviation of the Fast Fourier Transform of the three-dimensional body acceleration Jerk signals calculated using the Euclidean norm
+fBodyAccMag.mean.. - The mean of the Fast Fourier Transform of the three-dimensional body acceleration calculated using the Euclidean norm
+fBodyAccMag.std.. - The standard deviation of the Fast Fourier Transform of the three-dimensional body acceleration calculated using the Euclidean norm
+
+fBodyGyro.mean...X - The mean of the Fast Fourier Transform of the body gyroscopic acceleration in the X direction
+fBodyGyro.mean...Y - The mean of the Fast Fourier Transform of the body gyroscopic acceleration in the Y direction
+fBodyGyro.mean...Z - The mean of the Fast Fourier Transform of the body gyroscopic acceleration in the Z direction
+fBodyGyro.std...X - The standard deviation of the Fast Fourier Transform of the body gyroscopic acceleration in the X direction
+fBodyGyro.std...Y - The standard deviation of the Fast Fourier Transform of the body gyroscopic acceleration in the Y direction
+fBodyGyro.std...Z - The standard deviation of the Fast Fourier Transform of the body gyroscopic acceleration in the Z direction
+fBodyBodyGyroJerkMag.mean.. - The mean of the Fast Fourier Transform of the three-dimensional body gyroscopic acceleration Jerk signals calculated using the Euclidean norm
+fBodyBodyGyroJerkMag.std.. - The standard deviation of the Fast Fourier Transform of the three-dimensional body gyroscopic acceleration Jerk signals calculated using the Euclidean norm
+fBodyBodyGyroMag.mean.. - The mean of the Fast Fourier Transform of the three-dimensional body gyroscopic acceleration calculated using the Euclidean norm
+fBodyBodyGyroMag.std.. - The standard deviation of the Fast Fourier Transform of the three-dimensional body gyroscopic acceleration calculated using the Euclidean norm
+
